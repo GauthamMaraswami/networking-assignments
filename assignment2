@@ -1,0 +1,19 @@
+1.Error detection is reqired to ensure data transmission is done properly,if there are errors the data will be lost or enterpretted wrongly . Error detection we just find if errors are there or not,we are not intrested in type of error,no of errors  and other details about the errors .
+2.the two methods of error correction are backword error correction and forward error correction.backword error correction:-Reciever detects the error in data recieved and requests the sender to retransmit the data.Forward error corrrection:-when reciever detects error executes error correcting code and tries to rcover and correct errors
+3. The central concept of error detection and correction is redundency to detect errors extra bit is  sent along with the data,these extra bits are added by the sender and removed by the reciever .they help to detect and correct the errors.
+4. if recieved codeword is 111 it will be descarded as it is not a valid codeword  if recieved code word is 011 it is decoded to 01 and taken ,if recieved codeword is 110 it is recieved and decoded as 11 eventhhough that is not the transmitted code.
+5. two bit errors can be detected ,three bit errors also can be detected but if 4 bits are corrupted such that 2 bits in one row and corresponding two bits in the next row are corrupted ie
+      0 0 1 1                0 0 1 1
+	1 0 1 0                 1 1 0 0
+	1 1 1 1     becomes     1 0 0 1
+	1 0 0 1                 1 0 0 1
+	1 1 1 1                 1 1 1 1
+
+6..In framing to separate a frame from next a flag is addesd at the begining and end of the frame any pattern used for the flag could also be part of the information. this may cause problems so byte stuffing is used special byte called escape character is added to the data section of the frame when there is a character with the same pattern at the flag. when this is encounterd the flag like thing is considered as data.mostly  8-bit pattern flag 01111110 is used if this kind of data is found single bit 0  is stuffed if 0 and 5 consecutive 1 are found.at reciever the stuffed bit is ignored.
+7. network layer ensures the package is sent sucessfully from sender and recieved all packages at reciever.
+8.a.A device that forwards data packets along networks. commonly two LANs or WANs or a LAN and its ISP.s network. Routers are located , the places where two or more networks connect. Routers use headers and forwarding tables to determine the best path for forwarding the packets, and they use protocols such as ICMP to communicate with each other and configure the best route between any two hosts.switch  filters and forwards packets between LAN segments.  support any packet protocol. LANs that use switches to join segments are called switched LANs or, in the case of Ethernet networks, switched Ethernet LANs.
+b.Routing is finding a suitable path between two nodes,considering distance disortion etc,Forwarding means sending information through the path selected by routing 
+9.Every router will have a routing table associated with it. each packet has header which contains destination point.router checks for this destination address.Destination address- Output Port .the router checks the destination address in the routing table against the output port mentioned, and forwards the packet to that particular port.based on the path decided, the port numbers are mentioned in the routing table, against each destination address.the path is decided using routing algorithms.
+10.Shortest Distance of A from S is 5  Shortest Distance of B from S is 10 Shortest Distance of  D from S is 4 Shortest Distance of C from S is 6 through A ,Shortest Distance of E from S is 10 through D and shortest distance of T from S is 8 through A
+ 
+
